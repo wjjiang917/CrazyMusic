@@ -1,4 +1,4 @@
-package me.crazyjiang.crazymusic.ui.main.fragment;
+package me.crazyjiang.crazymusic.ui.my.fragment;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;

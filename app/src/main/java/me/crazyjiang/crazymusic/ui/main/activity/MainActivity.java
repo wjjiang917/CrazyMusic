@@ -22,8 +22,9 @@ import me.crazyjiang.crazymusic.presenter.MainPresenter;
 import me.crazyjiang.crazymusic.presenter.contract.MainContract;
 import me.crazyjiang.crazymusic.ui.BaseActivity;
 import me.crazyjiang.crazymusic.ui.ViewPagerAdapter;
+import me.crazyjiang.crazymusic.ui.discovery.fragment.DiscoveryFragment;
 import me.crazyjiang.crazymusic.ui.main.fragment.FooterFragment;
-import me.crazyjiang.crazymusic.ui.main.fragment.MyFragment;
+import me.crazyjiang.crazymusic.ui.my.fragment.MyFragment;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
     @BindView(R.id.drawer_layout)
@@ -68,11 +69,13 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         loadRootFragment(R.id.bottom_container, footerFragment);
 
+        fragments.add(new DiscoveryFragment());
         fragments.add(new MyFragment());
 
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager(), fragments);
         mViewPager.setAdapter(mAdapter);
 
+        mTabLayout.addTab(mTabLayout.newTab());
         mTabLayout.addTab(mTabLayout.newTab());
         mTabLayout.setupWithViewPager(mViewPager);
 
