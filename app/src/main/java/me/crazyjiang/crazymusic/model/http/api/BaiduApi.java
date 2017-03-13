@@ -5,5 +5,5 @@ package me.crazyjiang.crazymusic.model.http.api;
  */
 
 public interface BaiduApi {
-    String HOST = "";
+    String HOST = "http://tingapi.ting.baidu.com/v1/restserver/ting/";
 }

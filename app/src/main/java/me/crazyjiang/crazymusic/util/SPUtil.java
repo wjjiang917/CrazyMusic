@@ -15,22 +15,8 @@ public class SPUtil {
         return App.getInstance().getSharedPreferences(Constant.NAME_SP, Context.MODE_PRIVATE);
     }
 
-    /**
-     * night mode
-     */
-    public static boolean getNightModeState() {
-        return getSP().getBoolean(Constant.KEY_NIGHT_MODE, false);
-    }
-
-    /**
-     * night mode
-     */
-    public static void setNightModeState(boolean state) {
-        getSP().edit().putBoolean(Constant.KEY_NIGHT_MODE, state).apply();
-    }
-
     public static int getCurrentPage() {
-        return getSP().getInt(Constant.KEY_CURRENT_PAGE, Constant.TYPE_ZHIHU);
+        return getSP().getInt(Constant.KEY_CURRENT_PAGE, 0);
     }
 
     public static void setCurrentPage(int item) {

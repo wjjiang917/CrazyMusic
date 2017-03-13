@@ -8,6 +8,7 @@ import me.crazyjiang.crazymusic.di.module.AppModule;
 import me.crazyjiang.crazymusic.di.module.HttpModule;
 import me.crazyjiang.crazymusic.di.module.PageModule;
 import me.crazyjiang.crazymusic.model.http.ApiService;
+import me.crazyjiang.crazymusic.ui.main.fragment.FooterFragment;
 
 /**
  * Created by Jiangwenjin on 2017/2/28.
@@ -18,4 +19,6 @@ public interface AppComponent {
     App getContext();
 
     ApiService apiService();
+
+    FooterFragment footerFragment();
 }
