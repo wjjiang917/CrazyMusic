@@ -11,7 +11,7 @@
 
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="@dimen/discovery_toolbar_height">
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab_discovery"
